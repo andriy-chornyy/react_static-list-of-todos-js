@@ -1,6 +1,6 @@
 // import { UserInfo } from './components/UserInfo/UserInfo';
 // import { UserInfo } from '../UserInfo/UserInfo';
-//////
+/// ///
 // export const TodoInfo = ({ todo }) => (
 //   <>
 //     <article className="TodoInfo TodoInfo--completed">
@@ -29,7 +29,6 @@
 //   </>
 // );
 
-
 // import { TodoInfo } from '../TodoInfo/TodoInfo';
 
 // export const TodoList = ({ todos }) => (
@@ -43,9 +42,12 @@
 import { UserInfo } from '../UserInfo/UserInfo';
 
 export const TodoInfo = ({ todo }) => (
-  <article className={`TodoInfo ${todo.completed ? 'TodoInfo--completed' : ''}`}>
+  <article
+    className={`TodoInfo ${todo.completed ? 'TodoInfo--completed' : ''}`}
+  >
     <h2 className="TodoInfo__title">{todo.title}</h2>
 
     {todo.user && <UserInfo user={todo.user} />}
   </article>
 );
+
